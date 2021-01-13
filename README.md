@@ -35,7 +35,7 @@ Add the code necessary to create a Web API and implement the following _endpoint
 
 - [ ] POST - /api/users
 - [x] GET - /api/users
-- [ ] GET - /api/users/:id
+- [x] GET - /api/users/:id
 - [ ] DELETE - /api/users/:id
 - [ ] PUT - /api/users/:id
 
@@ -72,18 +72,18 @@ When the client makes a `POST` request to `/api/users`:
 
 When the client makes a `GET` request to `/api/users`:
 
-- If there's an error in retrieving the _users_ from the database:
+- [x] If there's an error in retrieving the _users_ from the database:
   - respond with HTTP status code `500`.
   - return the following JSON object: `{ errorMessage: "The users information could not be retrieved." }`.
 
 When the client makes a `GET` request to `/api/users/:id`:
 
-- If the _user_ with the specified `id` is not found:
+- [x] If the _user_ with the specified `id` is not found:
 
   - respond with HTTP status code `404` (Not Found).
   - return the following JSON object: `{ message: "The user with the specified ID does not exist." }`.
 
-- If there's an error in retrieving the _user_ from the database:
+- [x] If there's an error in retrieving the _user_ from the database:
   - respond with HTTP status code `500`.
   - return the following JSON object: `{ errorMessage: "The user information could not be retrieved." }`.
 
