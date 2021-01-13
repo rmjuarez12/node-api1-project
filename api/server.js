@@ -5,6 +5,10 @@ const express = require("express");
 const server = express();
 server.use(express.json());
 
+// Import and setup CORS
+const cors = require("cors");
+server.use(cors());
+
 // Import the Users model
 const User = require("./user-model");
 
