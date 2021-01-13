@@ -43,7 +43,7 @@ module.exports = {
   },
 
   delete(id) {
-    // DELETE FROM dogs WHERE id = 1;
+    // DELETE FROM users WHERE id = 1;
     const user = users.find((user) => user.id === id);
     if (!user) return Promise.resolve(null);
 

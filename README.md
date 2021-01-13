@@ -36,7 +36,7 @@ Add the code necessary to create a Web API and implement the following _endpoint
 - [x] POST - /api/users
 - [x] GET - /api/users
 - [x] GET - /api/users/:id
-- [ ] DELETE - /api/users/:id
+- [x] DELETE - /api/users/:id
 - [ ] PUT - /api/users/:id
 
 #### User Schema
@@ -92,12 +92,13 @@ When the client makes a `GET` request to `/api/users/:id`:
 
 When the client makes a `DELETE` request to `/api/users/:id`:
 
-- If the _user_ with the specified `id` is not found:
+- [x] If the _user_ with the specified `id` is not found:
 
   - respond with HTTP status code `404` (Not Found).
   - return the following JSON object: `{ message: "The user with the specified ID does not exist." }`.
 
-- If there's an error in removing the _user_ from the database:
+- [x] If there's an error in removing the _user_ from the database:
+
   - respond with HTTP status code `500`.
   - return the following JSON object: `{ errorMessage: "The user could not be removed" }`.
 

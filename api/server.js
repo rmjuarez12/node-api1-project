@@ -1,3 +1,5 @@
+//** Import necessary modules */
+
 // Import and setup express
 const express = require("express");
 const server = express();
@@ -6,7 +8,7 @@ server.use(express.json());
 // Import the Users model
 const User = require("./user-model");
 
-//** Handlers for user endpoints **/
+//** Handlers for user endpoints */
 
 // POST - create a new user
 server.post("/api/users", (req, res) => {
@@ -65,5 +67,28 @@ server.get("/api/users/:id", (req, res) => {
         .json({ errorMessage: "The user information could not be retrieved." });
     });
 });
+
+// DELETE - Delete a user by ID
+server.delete("/api/users/:id", (req, res) => {
+  const { id } = req.params;
+
+  User.delete(id)
+    .then((user) => {
+      if (user) {
+        res
+          .status(200)
+          .json({ message: `Successfully deleted user ${user.name}` });
+      } else {
+        res
+          .status(404)
+          .json({ message: "The user with the specified ID does not exist." });
+      }
+    })
+    .catch((err) => {
+      res.status(500).json({ errorMessage: "The user could not be removed" });
+    });
+});
+
+//** Export the module */
 
 module.exports = server;
