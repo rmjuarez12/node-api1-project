@@ -33,7 +33,7 @@ module.exports = {
   },
 
   update(id, changes) {
-    // UPDATE dogs SET name = 'Foo', weight = 9, adopter_id = 'abc' WHERE id = 1;
+    // UPDATE users SET name = 'Foo', bio = "Bar" WHERE id = 1;
     const user = users.find((user) => user.id === id);
     if (!user) return Promise.resolve(null);
 
